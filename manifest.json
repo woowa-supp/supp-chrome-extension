@@ -1,0 +1,29 @@
+{
+    "name": "SUPP Chrome Extension",
+    "description": "Pair Programming Support Tool",
+    "author": "SUPP",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "../popup.html"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [{
+        "matches": [
+            "*://techcourse.woowahan.com/s/*/lt/*"
+        ],
+        "all_frames": true,
+        "js": [
+            "./src/js/content_script.js"
+        ], 
+        "run_at": "document_end"
+    }],
+    "web_accessible_resources": [
+        "./src/assets/**"
+    ],
+    "icons": { 
+        "32": "./src/assets/logo/logo_small_dark.png"
+    }
+}
