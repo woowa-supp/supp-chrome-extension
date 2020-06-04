@@ -3,9 +3,20 @@
 // import { MUTATION_OBSERVE_CONFIG } from "../utils/constants.js";
 // import { profileTemplate } from "../utils/templates.js";
 
+const profileImageMap = {
+    "apple": "src/images/os/apple.png",
+    "linux": "src/images/os/linux.png",
+    "windows": "src/images/os/windows.png",
+    "code_guardian": "src/images/type/CODE_GUARDIAN.png",
+    "macgyver": "src/images/MACGYVER.png",
+    "mad_scientist": "src/images/type/MAD_SCIENTIST.png",
+    "ninja": "src/images/type/NINJA.png",
+    "the_architect": "src/images/type/THE_ARCHITECT.png"
+};
+
 const profileTemplate = profile => 
 `
-<div class="v-dialog v-dialog--active" style="width: 500px;">
+<div class="v-dialog v-dialog--active" style="width: 700px;">
     <div class="v-card v-sheet theme--light">
         <div class="v-card__title headline">
             <button type="button" id="back-button" class="absolute top-30 v-btn v-btn--flat v-btn--text theme--light v-size--default">
@@ -14,20 +25,24 @@ const profileTemplate = profile =>
                 </span>
             </button>
             <span class="text-center width-100 mt-4">${profile["login"]}</span> 
+            <button type="button" id="back-button" class="absolute top-30 right-60 v-btn--flat v-btn--text theme--light v-size--default">
+                <span class="v-btn__content">
+                        <img src="${chrome.runtime.getURL(profileImageMap[profile["osStyle"]])}" alt="">
+                </span>
+            </button>
+            <button type="button" id="back-button" class="absolute top-30 right-20 v-btn--flat v-btn--text theme--light v-size--default">
+                <span class="v-btn__content">
+                        <img src="${chrome.runtime.getURL(profileImageMap[profile["developerType"]])}" alt="">
+                </span>
+            </button>
         </div>
         <div class="mx-auto my-3"></div>
         <div class="v-card__text text-center">
+            <div>
+                <img src="https://avatars1.githubusercontent.com/u/20358042?s=400&u=cf1c0ad6fabec31beea9f2d5a64700e0d2f81203&v=4" alt="">            
+            </div>
             <div class="row">
                 <div class="col col-12">
-
-                <div class="v-card__title">개발자 타입</div>
-                <div class="v-card__text">
-                    <div class="text-left">
-                        <div class="tui-editor-contents">
-                            <p>${profile["devType"]}</p>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="v-card__title">운영체제</div>
                 <div class="v-card__text">
@@ -99,15 +114,15 @@ const MUTATION_OBSERVE_CONFIG = {
 };
 
 const profiles = {
-    "ks-kim": generateProfileData("ks-kim", "닌자", "MAC OS", "아무거나", "빈백조아", "기능단위로 진행", "6시 이후에는 페어 진행하지 않기", "테스트 명명법"),
-    "toneyparky": generateProfileData("toneyparky", "아키텍트", "MAC OS", "아무거나", "빈백매우조아", "5분 간격으로 진행", "6시 이후에도 쌉가능", "테스트 명명법"),
-    "lalize": generateProfileData("lalize", "아키텍트", "MAC OS", "아무거나", "빈백매우조아", "5분 간격으로 진행", "6시 이후에도 쌉가능", "테스트 명명법")
+    "ks-kim": generateProfileData("ks-kim", "ninja", "apple", "아무거나", "빈백조아", "기능단위로 진행", "6시 이후에는 페어 진행하지 않기", "테스트 명명법"),
+    "toneyparky": generateProfileData("toneyparky", "the_architect", "windows", "아무거나", "빈백매우조아", "5분 간격으로 진행", "6시 이후에도 쌉가능", "테스트 명명법"),
+    "lalize": generateProfileData("lalize", "the_architect", "linux", "아무거나", "빈백매우조아", "5분 간격으로 진행", "6시 이후에도 쌉가능", "테스트 명명법")
 }
 
-function generateProfileData(name, devType, osStyle, computerPrefer, breaktime, pairTurn, afterStudy, testName) {
+function generateProfileData(name, developerType, osStyle, computerPrefer, breaktime, pairTurn, afterStudy, testName) {
     return {
         "login": name,
-        "devType": devType,
+        "developerType": developerType,
         "osStyle": osStyle,
         "computerPrefer": computerPrefer,
         "breaktime": breaktime,
