@@ -88,34 +88,52 @@ const profileTemplate = profile =>
                 <div class="v-card__text">
                     <div class="text-left">
                         <div class="tui-editor-contents">
-<!--                            <p>${profile["testName"]}</p>-->
-         <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
-         <p>
-         <span style="font-size: 1.25rem; color: orange" >
-            @DisplayName(
-            <span style="font-size: 1.25rem; color: #fffafa">
-                "DisplayName을 사용하지 않는다면 작성하지 않아도 됩니다."
-            </span>
-            )<br>
-         </span> 
-         <span style="font-size: 1.25rem; color: orange">@Test</span>
-         </p>
-         <p>
-         <span style="font-size: 1.25rem; color: snow">void <span class="method-name-container">${profile["testName"]}</span> <span style="color: #fffafa">() {</span> </span><br>
-         <span style="font-size: 1.25rem; color: darkgrey">…</span><br>
-         <span style="font-size: 1.25rem; color: snow">}</span>
-         </p>
-        </div>                        
-            </div>
+<!--테스트메소드 시작-->
+                         <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
+                          <p>
+                          <span style="font-size: 1.25rem; color: orange" >
+                            @DisplayName(
+                            <span style="font-size: 1.25rem; color: #fffafa">
+                                "DisplayName을 사용하지 않는다면 작성하지 않아도 됩니다."
+                            </span>
+                            )<br>
+                         </span> 
+                         <span style="font-size: 1.25rem; color: orange">@Test</span>
+                         </p>
+                         <p>
+                         <span style="font-size: 1.25rem; color: snow">void <span class="method-name-container">${profile["testName"]}</span> <span style="color: #fffafa">() {</span> </span><br>
+                         <span style="font-size: 1.25rem; color: darkgrey">…</span><br>
+                         <span style="font-size: 1.25rem; color: snow">}</span>
+                         </p>
+                        </div>                        
+                            </div>
                 </div>
+<!--테스트 메소드 끝-->
+<!--깃헙 커밋 메시지 시작-->
                 <div class="v-card__title">깃헙 커밋 메시지 </div>
                 <div class="v-card__text">
                     <div class="text-left">
                         <div class="tui-editor-contents">
-                            <p>${profile["gitConvention"]}</p>
+                            <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
+                               <p style="color: orange; font-size: 1.25rem">
+                               public void printCars(Cars cars) { <br>
+                               ...
+                               <br>
+                               <span class="display-name-container" style="font-size: 1.25rem; color: snow">${profile["gitConvention"]}</span>
+                               </p>
+                               
+                               
+                               <p style="color: orange; font-size: 1.25rem">
+                               public Cars create() { <br>
+                               ...
+                               <br>
+                               <span class="method-name-container" style="font-size: 1.25rem; color: snow">${profile["gitConvention"]}</span> 
+                               </p>
+                              </div>
                         </div>
                     </div>
                 </div>
+<!--깃헙 커밋 메시지 끝-->                
                 </div>
             </div>
         </div>
