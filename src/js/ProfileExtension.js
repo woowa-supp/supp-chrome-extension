@@ -41,7 +41,7 @@ const profileTemplate = profile =>
             <div>
                 <img src="https://avatars1.githubusercontent.com/u/20358042?s=400&u=cf1c0ad6fabec31beea9f2d5a64700e0d2f81203&v=4" alt="">            
             </div>
-            
+            <br>
             <div class="v-card__title">${profile["messageToCrew"]}</div>
             <hr>
             
