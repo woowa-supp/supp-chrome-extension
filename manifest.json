@@ -16,7 +16,7 @@
         ],
         "all_frames": true,
         "js": [
-            "./src/js/ProfileExtension.js"
+            "./src/js/content.js"
         ], 
         "run_at": "document_end"
     }],
