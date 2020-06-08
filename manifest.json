@@ -21,7 +21,6 @@
         "run_at": "document_end"
     }],
     "web_accessible_resources": [
-        "/src/images/**",
         "/src/assets/**",
         "/src/utils/**",
         "/src/js/**"
