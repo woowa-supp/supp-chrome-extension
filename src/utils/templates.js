@@ -1,5 +1,5 @@
-export const profileTemplate = profile =>
-`
+export const profileTemplate = (profile) =>
+    `
 <div class="v-dialog v-dialog--active" style="width: 600px;">
     <div class="v-card v-sheet theme--light">
         <div class="v-card__title headline">
@@ -10,17 +10,17 @@ export const profileTemplate = profile =>
                         class="v-icon notranslate font-size-14 v-icon--left mdi mdi-arrow-left theme--light"></i> 뒤로
                 </span>
             </button>
-            <span class="text-center width-100 mt-4">${profile["login"]}</span>
+            <span class="text-center width-100 mt-4">${profile['login']}</span>
             <button type="button" id="back-button"
                 class="absolute top-30 right-60 v-btn--flat v-btn--text theme--light v-size--default">
                 <span class="v-btn__content">
-                    <img src="${profile["osStyle"]}" alt="">
+                    <img src="${profile['osStyle']}" alt="">
                 </span>
             </button>
             <button type="button" id="back-button"
                 class="absolute top-30 right-20 v-btn--flat v-btn--text theme--light v-size--default">
                 <span class="v-btn__content">
-                    <img src="${profile["developerType"]}" alt="">
+                    <img src="${profile['developerType']}" alt="">
                 </span>
             </button>
         </div>
@@ -31,7 +31,7 @@ export const profileTemplate = profile =>
                     alt="">
             </div>
             <br>
-            <div class="v-card__title">${profile["messageToCrew"]}</div>
+            <div class="v-card__title">${profile['messageToCrew']}</div>
             <hr>
   
             <div class="row">
@@ -41,7 +41,7 @@ export const profileTemplate = profile =>
                     <div class="v-card__text">
                         <div class="text-left">
                             <div class="tui-editor-contents">
-                                <p>${profile["computerPrefer"]}</p>
+                                <p>${profile['computerPrefer']}</p>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ export const profileTemplate = profile =>
                     <div class="v-card__text">
                         <div class="text-left">
                             <div class="tui-editor-contents">
-                                <p>${profile["breaktime"]}</p>
+                                <p>${profile['breaktime']}</p>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ export const profileTemplate = profile =>
                     <div class="v-card__text">
                         <div class="text-left">
                             <div class="tui-editor-contents">
-                                <p>${profile["pairTurn"]}</p>
+                                <p>${profile['pairTurn']}</p>
                             </div>
                         </div>
                     </div>
@@ -68,16 +68,16 @@ export const profileTemplate = profile =>
                     <div class="v-card__text">
                         <div class="text-left">
                             <div class="tui-editor-contents">
-                                <p>${profile["afterStudy"]}</p>
+                                <p>${profile['afterStudy']}</p>
                             </div>
                         </div>
                     </div>
   
+                    <!--테스트메소드 시작-->
                     <div class="v-card__title">테스트 메소드 </div>
                     <div class="v-card__text">
                         <div class="text-left">
                             <div class="tui-editor-contents">
-                                <!--테스트메소드 시작-->
                                 <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
                                     <p>
                                         <span style="font-size: 1.25rem; color: orange">
@@ -91,7 +91,7 @@ export const profileTemplate = profile =>
                                     </p>
                                     <p>
                                         <span style="font-size: 1.25rem; color: snow">void <span
-                                                class="method-name-container">${profile["testName"]}</span> <span
+                                                class="method-name-container">${profile['testName']}</span> <span
                                                 style="color: #fffafa">() {</span> </span><br>
                                         <span style="font-size: 1.25rem; color: darkgrey">…</span><br>
                                         <span style="font-size: 1.25rem; color: snow">}</span>
@@ -99,35 +99,35 @@ export const profileTemplate = profile =>
                                 </div>
                             </div>
                         </div>
-                        <!--테스트 메소드 끝-->
-                        <!--깃헙 커밋 메시지 시작-->
-                        <div class="v-card__title">깃헙 커밋 메시지 </div>
-                        <div class="v-card__text">
-                            <div class="text-left">
-                                <div class="tui-editor-contents">
-                                    <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
-                                        <p style="color: orange; font-size: 1.25rem">
-                                            public void printCars(Cars cars) { <br>
-                                            ...
-                                            <br>
-                                            <span class="display-name-container"
-                                                style="font-size: 1.25rem; color: snow">${profile["gitConvention"]}</span>
-                                        </p>
-  
-  
-                                        <p style="color: orange; font-size: 1.25rem">
-                                            public Cars create() { <br>
-                                            ...
-                                            <br>
-                                            <span class="method-name-container"
-                                                style="font-size: 1.25rem; color: snow">${profile["gitConvention"]}</span>
-                                        </p>
-                                    </div>
+                    </div>
+                    <!--테스트 메소드 끝-->
+                    <!--깃 커밋 메시지 시작-->
+                    <div class="v-card__title">깃헙 커밋 메시지 </div>
+                    <div class="v-card__text">
+                        <div class="text-left">
+                            <div class="tui-editor-contents">
+                                <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
+                                    <p style="color: orange; font-size: 1.25rem">
+                                        public void printCars(Cars cars) { <br>
+                                        ...
+                                        <br>
+                                        <span class="display-name-container"
+                                            style="font-size: 1.25rem; color: snow">${profile['gitConvention']}</span>
+                                    </p>
+
+
+                                    <p style="color: orange; font-size: 1.25rem">
+                                        public Cars create() { <br>
+                                        ...
+                                        <br>
+                                        <span class="method-name-container"
+                                            style="font-size: 1.25rem; color: snow">${profile['gitConvention']}</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <!--깃헙 커밋 메시지 끝-->
                     </div>
+                    <!--깃 커밋 메시지 끝-->
                 </div>
             </div>
         </div>
