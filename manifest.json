@@ -12,11 +12,12 @@
     ],
     "content_scripts": [{
         "matches": [
-            "*://techcourse.woowahan.com/s/*/lt/*"
+            "*://techcourse.woowahan.com/s/*/lt/*",
+            "*://techcourse.woowahan.com/s/*/ls/*"
         ],
         "all_frames": true,
         "js": [
-            "./src/js/content.js"
+            "./src/js/Content.js"
         ], 
         "run_at": "document_end"
     }],
