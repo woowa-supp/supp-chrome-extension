@@ -14,23 +14,23 @@ export const PROFILE_IMAGE_MAP = {
     WINDOWS: 'src/assets/images/os/windows.png',
     CODE_GUARDIAN: {
         resourcePath: 'src/assets/images/type/CODE_GUARDIAN.png',
-        linkPath: 'developer/code_guardian',
+        linkPath: '/developer/code_guardian',
     },
     MACGYVER: {
         resourcePath: 'src/assets/images/MACGYVER.png',
-        linkPath: 'developer/macgyver',
+        linkPath: '/developer/macgyver',
     },
     MAD_SCIENTIST: {
         resourcePath: 'src/assets/images/type/MAD_SCIENTIST.png',
-        linkPath: 'developer/mad_scientist',
+        linkPath: '/developer/mad_scientist',
     },
     NINJA: {
         resourcePath: 'src/assets/images/type/NINJA.png',
-        linkPath: 'developer/ninja',
+        linkPath: '/developer/ninja',
     },
     THE_ARCHITECT: {
         resourcePath: 'src/assets/images/type/THE_ARCHITECT.png',
-        linkPath: 'developer/the_architect',
+        linkPath: '/developer/the_architect',
     },
 };
 

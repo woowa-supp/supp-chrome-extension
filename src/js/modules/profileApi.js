@@ -1,9 +1,9 @@
-const BASE_URL = 'https://d10qlfpm4ciz64.cloudfront.net/api/v1';
-const DEV_TYPE_IMAGE_URL = 'http://52.78.188.23:8080/';
+const BASE_URL = 'https://d10qlfpm4ciz64.cloudfront.net';
+const API_BASE_URL = BASE_URL + '/api/v1';
 
 const api = (() => {
     const request = (url) =>
-        fetch(url).then((response) => {
+        fetch(API_BASE_URL + url).then((response) => {
             if (!response.ok) {
                 throw Error('프로필을 찾지 못했습니다.');
             }
@@ -11,13 +11,13 @@ const api = (() => {
         });
     const profile = {
         get(crewId) {
-            return request(`${BASE_URL}/survey-result/${crewId}`);
+            return request(`/survey-result/${crewId}`);
         },
     };
 
     return {
         profile,
-        DEV_TYPE_IMAGE_URL,
+        BASE_URL,
     };
 })();
 

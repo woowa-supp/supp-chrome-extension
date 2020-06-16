@@ -23,7 +23,7 @@ function ProfileExtension() {
         profile.pairTurn = PAIR_CHANGE_PERIOD[profile.pairTurn];
 
         profile.osStyle = chrome.runtime.getURL(PROFILE_IMAGE_MAP[profile.osStyle]);
-        profile.developerTypeLink = api.DEV_TYPE_IMAGE_URL + PROFILE_IMAGE_MAP[profile.developerType].linkPath;
+        profile.developerTypeLink = api.BASE_URL + PROFILE_IMAGE_MAP[profile.developerType].linkPath;
         profile.developerTypeImage = chrome.runtime.getURL(PROFILE_IMAGE_MAP[profile.developerType].resourcePath);
 
         const $cardBody = document.querySelector('div.v-dialog__content.v-dialog__content--active');
