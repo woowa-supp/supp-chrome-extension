@@ -37,7 +37,7 @@ function ProfileExtension() {
 
     const onClickUser = (event) => {
         const $parent = event.target.parentNode;
-        if ($parent.className !== 'v-list-item__content') {
+        if (!$parent.classList.contains('v-list-item__content')) {
             return;
         }
         const crewName = $parent.querySelector('div.v-list-item__subtitle.caption.text-left').innerText;
@@ -60,7 +60,7 @@ function ProfileExtension() {
             'v-dialog__content v-dialog__content--active dialog-transition-enter dialog-transition-enter-active' ===
                 mutation.addedNodes[0].className
         ) {
-            const $userCard = mutation.target.querySelector('div.v-card__text.text-center');
+            const $userCard = mutation.target.querySelector('div.v-card__text');
             $userCard.addEventListener(EVENT_TYPE.CLICK, onClickUser);
         }
     };
@@ -75,7 +75,7 @@ function ProfileExtension() {
 
     const onClickBackground = (event) => {
         event.preventDefault();
-        if (event.target.className !== 'v-overlay__scrim' || event.target.childList !== undefined) {
+        if (!event.target.classList.contains('v-overlay__scrim') || event.target.childList !== undefined) {
             return;
         }
         let $cardBody = document.querySelector('div.v-dialog__content.v-dialog__content--active');
