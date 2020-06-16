@@ -4,9 +4,6 @@
     "author": "SUPP",
     "version": "1.0.0",
     "manifest_version": 2,
-    "browser_action": {
-        "default_popup": "../popup.html"
-    },
     "permissions": [
         "activeTab"
     ],
@@ -27,6 +24,6 @@
         "/src/js/**"
     ],
     "icons": { 
-        "32": "./src/assets/logo/logo_small_dark.png"
+        "30": "./src/assets/logo/supp.png"
     }
 }
