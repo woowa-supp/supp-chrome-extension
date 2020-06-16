@@ -4,9 +4,6 @@
     "author": "SUPP",
     "version": "1.0.0",
     "manifest_version": 2,
-    "permissions": [
-        "activeTab"
-    ],
     "content_scripts": [{
         "matches": [
             "*://techcourse.woowahan.com/s/*/lt/*",
