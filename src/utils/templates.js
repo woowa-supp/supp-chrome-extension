@@ -104,9 +104,9 @@ export const profileTemplate = (profile) =>
                             <div class="tui-editor-contents">
                                 <div class="input-answer" style="background-color: rgb(63, 68, 71); padding: 2rem;">
                                     <span style="font-size: 1.0rem; color: darkgrey">// 기능 구현 커밋 메시지</span><br>
-                                    <span class="display-name-container" style="font-size: 1.0rem; color: snow">${profile.gitConventionSecondAnswer}</span><br><br>
-                                    <span style="font-size: 1.0rem; color: darkgrey">// 기능 수정 커밋 메시지</span><br>
-                                    <span class="display-name-container" style="font-size: 1.0rem; color: snow">${profile.gitConventionFirstAnswer}</span>
+                                    <span class="display-name-container" style="font-size: 1.0rem; color: snow">${profile.gitConventionFirstAnswer}</span><br><br>
+                                    <span style="font-size: 1.0rem; color: darkgrey">// 버그 고침 커밋 메시지</span><br>
+                                    <span class="display-name-container" style="font-size: 1.0rem; color: snow">${profile.gitConventionSecondAnswer}</span>
                                 </div>
                             </div>
                         </div>
