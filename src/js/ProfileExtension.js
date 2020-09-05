@@ -1,5 +1,5 @@
 import api from './api/ProfileApi.js';
-import { profileTemplate } from '../utils/Templates.js';
+import { profileTemplate } from './util/Templates.js';
 import {
     BASE_URL,
     OS_STYLE_IMAGE_MAP,
@@ -9,7 +9,7 @@ import {
     BREAK_TIME,
     AFTER_STUDY_STYLE,
     PAIR_CHANGE_PERIOD,
-} from '../utils/constants.js';
+} from './util/constants.js';
 
 (function ProfileExtension() {
 
