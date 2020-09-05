@@ -72,7 +72,7 @@ export const profileTemplate = (profile) =>
                             </div>
                         </div>
                     </div>
-  
+
                     <!--테스트메소드 시작-->
                     <div class="v-card__title">테스트 메소드 </div>
                     <div class="v-card__text">
