@@ -1,36 +1,38 @@
-export const MUTATION_OBSERVE_CONFIG = {
-    attributes: true,
-    childList: true,
-    characterData: true,
-};
+export const BASE_URL = 'https://d10qlfpm4ciz64.cloudfront.net';
 
 export const EVENT_TYPE = {
     CLICK: 'click',
 };
 
+const BASE_RESOURCE_PATH = 'src/assets/images';
+const BASE_LINK_PATH = `developer`;
+
+export const OS_STYLE_IMAGE_MAP = {
+    APPLE: `${BASE_RESOURCE_PATH}/os/apple.png`,
+    LINUX: `${BASE_RESOURCE_PATH}/os/linux.png`,
+    WINDOWS: `${BASE_RESOURCE_PATH}/os/windows.png`,
+}
+
 export const PROFILE_IMAGE_MAP = {
-    APPLE: 'src/assets/images/os/apple.png',
-    LINUX: 'src/assets/images/os/linux.png',
-    WINDOWS: 'src/assets/images/os/windows.png',
     CODE_GUARDIAN: {
-        resourcePath: 'src/assets/images/type/CODE_GUARDIAN.png',
-        linkPath: 'developer/code_guardian',
+        resourcePath: `${BASE_RESOURCE_PATH}/type/CODE_GUARDIAN.png`,
+        linkPath: `${BASE_LINK_PATH}/code_guardian`,
     },
     MACGYVER: {
-        resourcePath: 'src/assets/images/MACGYVER.png',
-        linkPath: 'developer/macgyver',
+        resourcePath: `${BASE_RESOURCE_PATH}/type/MACGYVER.png`,
+        linkPath: `${BASE_LINK_PATH}/MACGYVER`,
     },
     MAD_SCIENTIST: {
-        resourcePath: 'src/assets/images/type/MAD_SCIENTIST.png',
-        linkPath: 'developer/mad_scientist',
+        resourcePath: `${BASE_RESOURCE_PATH}/type/MAD_SCIENTIST.png`,
+        linkPath: `${BASE_LINK_PATH}/mad_scientist`,
     },
     NINJA: {
-        resourcePath: 'src/assets/images/type/NINJA.png',
-        linkPath: 'developer/ninja',
+        resourcePath: `${BASE_RESOURCE_PATH}/type/NINJA.png`,
+        linkPath: `${BASE_LINK_PATH}/ninja`,
     },
     THE_ARCHITECT: {
-        resourcePath: 'src/assets/images/type/THE_ARCHITECT.png',
-        linkPath: 'developer/the_architect',
+        resourcePath: `${BASE_RESOURCE_PATH}/type/THE_ARCHITECT.png`,
+        linkPath: `${BASE_LINK_PATH}/the_architect`,
     },
 };
 
