@@ -11,8 +11,7 @@ import {
     PAIR_CHANGE_PERIOD,
 } from './util/constants.js';
 
-(function ProfileExtension() {
-
+(() => {
     const $application = document.querySelector('.v-application');
 
     const convertProfile = (profile) => {
