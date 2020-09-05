@@ -9,8 +9,7 @@
     ],
     "content_scripts": [{
         "matches": [
-            "*://techcourse.woowahan.com/s/*/lt/*",
-            "*://techcourse.woowahan.com/s/*/ls/*"
+            "*://techcourse.woowahan.com/*/*/*/*"
         ],
         "all_frames": true,
         "js": [
