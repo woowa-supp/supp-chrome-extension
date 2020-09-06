@@ -1,5 +1,5 @@
 export const profileTemplate = (profile) =>
-    `
+  `
 <div class="v-dialog v-dialog--active" style="width: 600px;">
     <div class="v-card v-sheet theme--light">
         <div class="v-card__title headline">
@@ -11,13 +11,13 @@ export const profileTemplate = (profile) =>
                 </span>
             </button>
             <span class="text-center width-100 mt-4">${profile.login}</span>
-            <button type="button" id="back-button"
+            <button type="button"
                 class="absolute top-30 right-60 v-btn--flat v-btn--text theme--light v-size--default">
                 <span class="v-btn__content">
                     <img src="${profile.osStyle}" alt="">
                 </span>
             </button>
-            <button type="button" id="back-button" onClick="window.open('${profile.developerTypeLink}')"
+            <button type="button" onClick="window.open('${profile.developerTypeLink}')"
                 class="absolute top-30 right-20 v-btn--flat v-btn--text theme--light v-size--default">
                 <span class="v-btn__content">
                     <img src="${profile.developerTypeImage}" alt="">
@@ -72,7 +72,7 @@ export const profileTemplate = (profile) =>
                             </div>
                         </div>
                     </div>
-  
+
                     <!--테스트메소드 시작-->
                     <div class="v-card__title">테스트 메소드 </div>
                     <div class="v-card__text">
