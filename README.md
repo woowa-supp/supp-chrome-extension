@@ -1,14 +1,20 @@
-# supp-chrome-extension
+# SUPP Chrome Extension
 
-## 기능목록
+## Features
 
-* techcourse.woowahan.com 미션 페이지에 접속하면 지정된 script를 실행한다.
-* '나의 팀' 버튼을 클릭했을 때 DOM 변화를 감지하여 페어의 아이디를 parsing한다.
-    * 다른 미션을 눌렀을 때 client rendering이 이루어져 기존에 지정한 element가 더이상 존재하지 않을 수 있다.
-    * `MutationObserver`를 통해 DOM 변화를 감지하도록 한다.
-* 페어의 아이디를 path 인자로 넣어 서버에 프로필 GET 요청을 보낸다.
-    * 테스트를 할 때에는 Mock을 이용하여 유저의 프로필을 출력한다.
-* 페어의 프로필이 존재하지 않는 경우 알림 문구를 출력한다.
-* 페어의 프로필이 존재하는 경우 '나의 팀'화면을 가리고 해당 페어의 프로필을 출력한다.
-    * 뒤로가기 버튼을 누르면 '나의 팀' 화면으로 돌아온다.
-    * 배경화면을 누른 뒤 다시 '나의 팀' 버튼을 누르면 초기 화면이 나오도록 한다.
+* 우아한테크코스 미션 페이지 내 '나의 팀' 버튼을 누르면 나오는 페어의 프로필을 확인할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/20358042/92332373-85f07b00-f0b8-11ea-813b-fe329e96d989.png)
+
+## Change Log
+
+* v1.0.0
+    * 기본 기능 완성
+* v1.0.2
+    * 화면을 벗어날 때 간헐적으로 프로필 다이얼로그가 사라지지 않는 현상 수정
+
+## Links
+
+* [크롬 확장 프로그램](https://chrome.google.com/webstore/detail/ohpbfpoinegeoajhhpolgghcfmcbflnc?authuser=1&hl=ko)
+* [SUPP 설문 페이지](https://d10qlfpm4ciz64.cloudfront.net/)
+* [우아한테크코스](https://techcourse.woowahan.com)
