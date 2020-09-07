@@ -57,7 +57,6 @@ import {
   };
 
   const onClickBackground = (event) => {
-    event.preventDefault();
     if (!event.target.classList.contains('v-overlay__scrim')) {
       return;
     }
