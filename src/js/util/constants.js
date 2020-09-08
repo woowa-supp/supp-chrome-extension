@@ -20,7 +20,7 @@ export const PROFILE_IMAGE_MAP = {
   },
   MACGYVER: {
     resourcePath: `${BASE_RESOURCE_PATH}/type/MACGYVER.png`,
-    linkPath: `${BASE_LINK_PATH}/MACGYVER`,
+    linkPath: `${BASE_LINK_PATH}/macgyver`,
   },
   MAD_SCIENTIST: {
     resourcePath: `${BASE_RESOURCE_PATH}/type/MAD_SCIENTIST.png`,
